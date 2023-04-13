@@ -142,7 +142,7 @@ inboundCall:
               globalSpeechRecTerms: false
               targetQueue:
                 lit:
-                  name: Simple Financial IRA queue
+                  name: Simple Financial queue
               preTransferAudio:
                 tts: We will transfer you to a 401K specialist shortly
               failureTransferAudio:
