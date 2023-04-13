@@ -59,7 +59,7 @@ resource "genesyscloud_user" "sf_janesmith" {
 }
 
 resource "genesyscloud_routing_queue" "queue_ira" {
-  name                     = "Simple Financial giutgiqueue"
+  name                     = "Simple Financial queue"
   description              = "Simple Financial IRA questions and answers"
   acw_wrapup_prompt        = "MANDATORY_TIMEOUT"
   acw_timeout_ms           = 300000
