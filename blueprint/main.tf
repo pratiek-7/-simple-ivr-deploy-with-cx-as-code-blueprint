@@ -21,7 +21,7 @@ resource "genesyscloud_user" "sf_johnsmith" {
   addresses {
 
     phone_numbers {
-      number     = "+19205551212"
+      number     = my_ivr_did_number
       media_type = "PHONE"
       type       = "MOBILE"
     }
@@ -45,7 +45,7 @@ resource "genesyscloud_user" "sf_janesmith" {
   addresses {
 
     phone_numbers {
-      number     = "+19205551212"
+      number     = my_ivr_did_number
       media_type = "PHONE"
       type       = "MOBILE"
     }
@@ -99,6 +99,10 @@ resource "genesyscloud_flow" "mysimpleflow" {
   file_content_hash = filesha256("./SimpleFinancialIvr_v2-0.yaml") 
 }
 
+variable "my_ivr_did_number" {
+  type        = string
+  description = "Phone number used for my simple IVR"
+}
 
 resource "genesyscloud_telephony_providers_edges_did_pool" "mygcv_number" {
   start_phone_number = "+19205422729"
