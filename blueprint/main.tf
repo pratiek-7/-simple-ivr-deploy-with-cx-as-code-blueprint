@@ -21,7 +21,7 @@ resource "genesyscloud_user" "sf_johnsmith" {
   addresses {
 
     phone_numbers {
-      number     = "9205551212"
+      number     = "+19205551212"
       media_type = "PHONE"
       type       = "MOBILE"
     }
@@ -45,7 +45,7 @@ resource "genesyscloud_user" "sf_janesmith" {
   addresses {
 
     phone_numbers {
-      number     = "9205551212"
+      number     = "+19205551212"
       media_type = "PHONE"
       type       = "MOBILE"
     }
@@ -59,7 +59,7 @@ resource "genesyscloud_user" "sf_janesmith" {
 }
 
 resource "genesyscloud_routing_queue" "queue_ira" {
-  name                     = "Simple Financial queue"
+  name                     = "Simple Financial giutgiqueue"
   description              = "Simple Financial IRA questions and answers"
   acw_wrapup_prompt        = "MANDATORY_TIMEOUT"
   acw_timeout_ms           = 300000
